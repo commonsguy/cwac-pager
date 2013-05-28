@@ -27,7 +27,7 @@ use of fragments. It also bears some resemblance to the `ArrayAdapter` used for
 Usage
 -----
 
-## Adding the JAR
+### Adding the JAR
 
 As the CWAC-Pager project does not need its own resources, it is packaged in the
 form of a simple JAR file, which you can [download](https://github.com/commonsguy/downloads)
