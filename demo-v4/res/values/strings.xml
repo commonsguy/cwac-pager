@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">CWAC-Pager V4 Demo</string>
+	<string name="hint">Editor #%d</string>
+	<string name="split">Fork</string>
+	<string name="add">Add Before</string>
+	<string name="remove">Remove</string>
+	<string name="swap">Swap</string>
+
+</resources>
