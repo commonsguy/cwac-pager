@@ -90,7 +90,7 @@ is serving up to the `ViewPager`. So, for example, if you have a `ViewPager`
 that will have each page be an `EditorFragment`, you would declare your
 custom `ArrayPagerAdapter` like so:
 
-   static class SamplePagerAdapter extends
+    static class SamplePagerAdapter extends
        ArrayPagerAdapter<EditorFragment> {
 
 If you will have pages come from a variety of fragments, just use the
