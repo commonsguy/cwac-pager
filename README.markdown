@@ -6,8 +6,8 @@ This Android library project (also
 offers an `ArrayPagerAdapter` that offers another alternative `PagerAdapter`
 implementation for use with `ViewPager`.
 
-(**NOTE**: the following paragraphs and the "Usage" section are excerpted
-from [The Busy Coder's Guide to Android Development](http://commonsware.com/Android).
+( **NOTE**: the following paragraphs and the "Usage" section are excerpted
+from [The Busy Coder's Guide to Android Development](http://commonsware.com/Android). )
 
 The two concrete `PagerAdapter` implementations shipped in the Android
 Support package -- `FragmentPagerAdapter` and `FragmentStatePagerAdapter` -- have
