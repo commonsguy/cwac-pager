@@ -101,7 +101,10 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
 
     if (fragment != currPrimaryItem) {
       fragment.setMenuVisibility(false);
-      fragment.setUserVisibleHint(false);
+
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1) {
+        fragment.setUserVisibleHint(false);
+      }
     }
 
     return(fragment);
