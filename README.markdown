@@ -2,7 +2,7 @@ CWAC-Pager: Power to the PagerAdapter
 =====================================
 
 This Android library project (also
-[available as a JAR](https://github.com/commonsguy/downloads))
+[available as a JAR](https://github.com/commonsguy/cwac-pager/releases))
 offers an `ArrayPagerAdapter` that offers another alternative `PagerAdapter`
 implementation for use with `ViewPager`.
 
