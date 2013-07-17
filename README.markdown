@@ -30,7 +30,7 @@ Usage
 ### Adding the JAR
 
 As the CWAC-Pager project does not need its own resources, it is packaged in the
-form of a simple JAR file, which you can [download](https://github.com/commonsguy/downloads)
+form of a simple JAR file, which you can [download](https://github.com/commonsguy/cwac-pager/releases)
 and add to your project by
 conventional means (e.g., putting it in the `libs/` directory).
 
