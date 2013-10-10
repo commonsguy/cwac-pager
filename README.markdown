@@ -153,6 +153,13 @@ position in the `ViewPager`, if that fragment exists. Otherwise, it returns
 `getCurrentFragment()` is like `getExistingFragment()`, but returns the fragment
 for the currently-viewed page in the `ViewPager`.
 
+### Limitations
+
+The `ViewPager` used by the `ArrayPagerAdapter` must have the same ID in all configurations.
+Usually, this is not a problem, particularly if the ID is set to be the same via
+`android:id` in layouts. However, if you are dynamically creating your `ViewPager`
+instance at runtime, this is something to keep in mind.
+
 Dependencies
 ------------
 This project depends on the Android Support package at compile time, if you are using
