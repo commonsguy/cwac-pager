@@ -161,7 +161,7 @@ if you are using the `v4` classes.
 
 Version
 -------
-This is version v0.1.1 of this module, meaning it is brand new.
+This is version v0.1.2 of this module, meaning it is brand new.
 
 Demo
 ----
@@ -197,6 +197,7 @@ the fence may work, but it may not.
 
 Release Notes
 -------------
+- v0.1.2: fixed `Parcelable` classloader bug
 - v0.1.1: minor bug fixes in backwards-compatibility support
 - v0.1.0: initial release
 
