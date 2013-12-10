@@ -2,7 +2,7 @@ CWAC-Pager: Power to the PagerAdapter
 =====================================
 
 This Android library project (also
-[available as a JAR](https://github.com/commonsguy/downloads))
+[available as a JAR](https://github.com/commonsguy/cwac-pager/releases))
 offers an `ArrayPagerAdapter` that offers another alternative `PagerAdapter`
 implementation for use with `ViewPager`.
 
@@ -30,7 +30,7 @@ Usage
 ### Adding the JAR
 
 As the CWAC-Pager project does not need its own resources, it is packaged in the
-form of a simple JAR file, which you can [download](https://github.com/commonsguy/downloads)
+form of a simple JAR file, which you can [download](https://github.com/commonsguy/cwac-pager/releases)
 and add to your project by
 conventional means (e.g., putting it in the `libs/` directory).
 
@@ -152,6 +152,13 @@ position in the `ViewPager`, if that fragment exists. Otherwise, it returns
 
 `getCurrentFragment()` is like `getExistingFragment()`, but returns the fragment
 for the currently-viewed page in the `ViewPager`.
+
+### Limitations
+
+The `ViewPager` used by the `ArrayPagerAdapter` must have the same ID in all configurations.
+Usually, this is not a problem, particularly if the ID is set to be the same via
+`android:id` in layouts. However, if you are dynamically creating your `ViewPager`
+instance at runtime, this is something to keep in mind.
 
 Dependencies
 ------------
