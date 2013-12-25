@@ -1,10 +1,29 @@
 CWAC-Pager: Power to the PagerAdapter
 =====================================
 
-This Android library project (also
-[available as a JAR](https://github.com/commonsguy/cwac-pager/releases))
+This project
 offers an `ArrayPagerAdapter` that offers another alternative `PagerAdapter`
 implementation for use with `ViewPager`.
+
+This Android library project is 
+[available as a JAR](https://github.com/commonsguy/cwac-pager/releases)
+or as an artifact for use with Gradle. To use that, add the following
+blocks to your `build.gradle` file:
+
+```groovy
+repositories {
+    maven {
+        url "https://repo.commonsware.com.s3.amazonaws.com"
+    }
+}
+
+dependencies {
+    compile 'com.commonsware.cwac:pager:0.2.0'
+}
+```
+
+Or, if you cannot use SSL, use `http://repo.commonsware.com` for the repository
+URL.
 
 ( **NOTE**: the following paragraphs and the "Usage" section are excerpted
 from [The Busy Coder's Guide to Android Development](http://commonsware.com/Android). )
@@ -164,11 +183,12 @@ Dependencies
 ------------
 This project depends on the Android Support package at compile time, if you are using
 the Android library project. It also depends on the Android Support package at runtime
-if you are using the `v4` classes.
+if you are using the `v4` classes. The Gradle files handle this automatically,
+pulling from the appropriate repositories.
 
 Version
 -------
-This is version v0.1.2 of this module, meaning it is brand new.
+This is version v0.2.0 of this module, meaning it is brand new.
 
 Demo
 ----
@@ -204,6 +224,7 @@ the fence may work, but it may not.
 
 Release Notes
 -------------
+- v0.2.0: added Gradle build files and published AAR
 - v0.1.2: fixed `Parcelable` classloader bug
 - v0.1.1: minor bug fixes in backwards-compatibility support
 - v0.1.0: initial release
