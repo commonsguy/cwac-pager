@@ -60,8 +60,10 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
     this.fm=fragmentManager;
     this.entries=new ArrayList<PageEntry>();
 
-    for (PageDescriptor d : descriptors) {
-      entries.add(new PageEntry(d));
+    for (PageDescriptor desc : descriptors) {
+      validatePageDescriptor(desc);
+      
+      entries.add(new PageEntry(desc));
     }
 
     this.retentionStrategy=retentionStrategy;
@@ -194,12 +196,16 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
   }
 
   public void add(PageDescriptor desc) {
+    validatePageDescriptor(desc);
+    
     positionDelta.clear();
     entries.add(new PageEntry(desc));
     notifyDataSetChanged();
   }
 
   public void insert(PageDescriptor desc, int position) {
+    validatePageDescriptor(desc);
+    
     positionDelta.clear();
 
     for (int i=position; i < entries.size(); i++) {
@@ -255,6 +261,17 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
 
   private String getFragmentTag(int position) {
     return(entries.get(position).getDescriptor().getFragmentTag());
+  }
+
+  private void validatePageDescriptor(PageDescriptor desc) {
+    for (PageEntry entry : entries) {
+      if (desc.getFragmentTag().equals(entry.getDescriptor()
+                                            .getFragmentTag())) {
+        throw new IllegalArgumentException(
+                                           "PageDescriptor tag not unique: "
+                                               + desc.getFragmentTag());
+      }
+    }
   }
 
   public static final RetentionStrategy KEEP=new RetentionStrategy() {

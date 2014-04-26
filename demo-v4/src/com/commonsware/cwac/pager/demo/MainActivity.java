@@ -28,6 +28,7 @@ import com.commonsware.cwac.pager.v4.ArrayPagerAdapter;
 public class MainActivity extends SherlockFragmentActivity {
   private ArrayPagerAdapter<EditorFragment> adapter=null;
   private ViewPager pager=null;
+  private int pageNumber=1;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -70,7 +71,7 @@ public class MainActivity extends SherlockFragmentActivity {
   }
 
   private String buildTag(int position) {
-    return("editor" + String.valueOf(position));
+    return("editor" + String.valueOf(pageNumber++));
   }
 
   private String buildTitle(int position) {
