@@ -178,7 +178,7 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
   public void restoreState(Parcelable state, ClassLoader loader) {
     Bundle b=(Bundle)state;
     
-    b.setClassLoader(Thread.currentThread().getContextClassLoader());
+    b.setClassLoader(getClass().getClassLoader());
     
     entries=((Bundle)state).getParcelableArrayList(KEY_DESCRIPTORS);
   }
@@ -311,8 +311,8 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
     }
 
     PageEntry(Parcel in) {
-      this.descriptor=in.readParcelable(Thread.currentThread().getContextClassLoader());
-      this.state=in.readParcelable(Thread.currentThread().getContextClassLoader());
+      this.descriptor=in.readParcelable(getClass().getClassLoader());
+      this.state=in.readParcelable(getClass().getClassLoader());
     }
 
     PageDescriptor getDescriptor() {
