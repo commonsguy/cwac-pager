@@ -18,15 +18,12 @@ repositories {
 }
 
 dependencies {
-    compile 'com.commonsware.cwac:pager:0.2.0'
+    compile 'com.commonsware.cwac:pager:0.2.+'
 }
 ```
 
 Or, if you cannot use SSL, use `http://repo.commonsware.com` for the repository
 URL.
-
-( **NOTE**: the following paragraphs and the "Usage" section are excerpted
-from [The Busy Coder's Guide to Android Development](http://commonsware.com/Android). )
 
 The two concrete `PagerAdapter` implementations shipped in the Android
 Support package -- `FragmentPagerAdapter` and `FragmentStatePagerAdapter` -- have
@@ -45,13 +42,8 @@ use of fragments. It also bears some resemblance to the `ArrayAdapter` used for
 
 Usage
 -----
-
-### Adding the JAR
-
-As the CWAC-Pager project does not need its own resources, it is packaged in the
-form of a simple JAR file, which you can [download](https://github.com/commonsguy/cwac-pager/releases)
-and add to your project by
-conventional means (e.g., putting it in the `libs/` directory).
+Once you have added the JAR or AAR to your project, you can start using
+`ArrayPagerAdapter`.
 
 ### Choosing the Package
 
@@ -97,6 +89,9 @@ is a built-in implementation, `SimplePageDescriptor`, which probably meets
 your needs. You just pass the tag and title into the `SimplePageDescriptor`
 constructor, and it handles everything else, including the `Parcelable`
 implementation.
+
+Note that `getFragmentTag()` must return unique values compared to any
+other outstanding page in the adapter.
 
 ### Creating and Populating the Adapter
 
@@ -188,7 +183,7 @@ pulling from the appropriate repositories.
 
 Version
 -------
-This is version v0.2.0 of this module, meaning it is brand new.
+This is version v0.2.1 of this module, meaning it is brand new.
 
 Demo
 ----
@@ -224,6 +219,7 @@ the fence may work, but it may not.
 
 Release Notes
 -------------
+- v0.2.1: re-fixed `Parcelable` classloader bug, now enforcing tag uniqueness
 - v0.2.0: added Gradle build files and published AAR
 - v0.1.2: fixed `Parcelable` classloader bug
 - v0.1.1: minor bug fixes in backwards-compatibility support
