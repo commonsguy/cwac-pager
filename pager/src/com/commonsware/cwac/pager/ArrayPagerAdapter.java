@@ -183,6 +183,7 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
     b.setClassLoader(getClass().getClassLoader());
 
     entries=((Bundle)state).getParcelableArrayList(KEY_DESCRIPTORS);
+    notifyDataSetChanged();
   }
 
   @Override
