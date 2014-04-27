@@ -3,15 +3,15 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.+'
+        classpath 'com.android.tools.build:gradle:0.8.+'
     }
 }
 
 apply plugin: 'android'
 
 repositories {
+    mavenCentral()
     maven {
-        mavenCentral()
         url "https://repo.commonsware.com.s3.amazonaws.com"
     }
 }
@@ -23,7 +23,7 @@ dependencies {
 
 android {
     compileSdkVersion 17
-    buildToolsVersion "18.1.0"
+    buildToolsVersion "19.0.1"
 
     sourceSets {
         main {
