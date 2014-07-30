@@ -50,12 +50,12 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
   private RetentionStrategy retentionStrategy=null;
 
   public ArrayPagerAdapter(FragmentManager fragmentManager,
-                           ArrayList<PageDescriptor> descriptors) {
+                           List<PageDescriptor> descriptors) {
     this(fragmentManager, descriptors, null);
   }
 
   public ArrayPagerAdapter(FragmentManager fragmentManager,
-                           ArrayList<PageDescriptor> descriptors,
+                           List<PageDescriptor> descriptors,
                            RetentionStrategy retentionStrategy) {
     this.fm=fragmentManager;
     this.entries=new ArrayList<PageEntry>();
