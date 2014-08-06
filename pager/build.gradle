@@ -3,15 +3,15 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.9.+'
+        classpath 'com.android.tools.build:gradle:0.12.+'
         classpath 'com.github.dcendents:android-maven-plugin:1.0'
     }
 }
 
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 apply plugin: 'android-maven'
 
-version '0.2.1'
+version '0.2.2'
 group 'com.commonsware.cwac'
 
 dependencies {
@@ -21,7 +21,7 @@ dependencies {
 
 android {
     compileSdkVersion 17
-    buildToolsVersion "19.0.1"
+    buildToolsVersion "19.1.0"
 
     sourceSets {
         main {
@@ -43,11 +43,12 @@ android {
 
 android.libraryVariants.all { variant ->
   def name = variant.buildType.name
-  if (name.equals(com.android.builder.BuilderConstants.DEBUG)) {
+  if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
     return; // Skip debug builds.
   }
   def task = project.tasks.create "jar${name.capitalize()}", Jar
   task.dependsOn variant.javaCompile
   task.from variant.javaCompile.destinationDir
-  // artifacts.add('archives', task);
+  task.archiveName = "cwac-${task.archiveName}"
+  task.exclude('com/commonsware/cwac/**/BuildConfig.**')
 }

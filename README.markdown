@@ -25,6 +25,8 @@ dependencies {
 Or, if you cannot use SSL, use `http://repo.commonsware.com` for the repository
 URL.
 
+NOTE: The JAR name, as of v0.2.2, has a `cwac-` prefix, to help distinguish it from other JARs.
+
 The two concrete `PagerAdapter` implementations shipped in the Android
 Support package -- `FragmentPagerAdapter` and `FragmentStatePagerAdapter` -- have
 their limitations when it comes to things like:
@@ -183,7 +185,7 @@ pulling from the appropriate repositories.
 
 Version
 -------
-This is version v0.2.1 of this module, meaning it is brand new.
+This is version v0.2.2 of this module, meaning it is brand new.
 
 Demo
 ----
@@ -219,6 +221,7 @@ the fence may work, but it may not.
 
 Release Notes
 -------------
+- v0.2.2: merged issue #5 to support `List` in `ArrayPagerAdapter` constructor
 - v0.2.1: re-fixed `Parcelable` classloader bug, now enforcing tag uniqueness
 - v0.2.0: added Gradle build files and published AAR
 - v0.1.2: fixed `Parcelable` classloader bug
