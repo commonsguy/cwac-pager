@@ -63,7 +63,7 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
 
     for (PageDescriptor desc : descriptors) {
       validatePageDescriptor(desc);
-      
+
       entries.add(new PageEntry(desc));
     }
 
@@ -98,7 +98,7 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
       else {
         fm.beginTransaction().remove(fragment).commit();
         fm.executePendingTransactions();
-        
+
         currTransaction.add(container.getId(), fragment,
                             getFragmentTag(position));
       }
@@ -173,12 +173,14 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
 
   @Override
   public void restoreState(Parcelable state, ClassLoader loader) {
-    Bundle b=(Bundle)state;
-    
-    b.setClassLoader(getClass().getClassLoader());
-    
-    entries=((Bundle)state).getParcelableArrayList(KEY_DESCRIPTORS);
-    notifyDataSetChanged();
+    if (state != null) {
+      Bundle b=(Bundle)state;
+
+      b.setClassLoader(getClass().getClassLoader());
+
+      entries=((Bundle)state).getParcelableArrayList(KEY_DESCRIPTORS);
+      notifyDataSetChanged();
+    }
   }
 
   @Override
@@ -199,7 +201,7 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
 
   public void add(PageDescriptor desc) {
     validatePageDescriptor(desc);
-    
+
     positionDelta.clear();
     entries.add(new PageEntry(desc));
     notifyDataSetChanged();
@@ -207,7 +209,7 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
 
   public void insert(PageDescriptor desc, int position) {
     validatePageDescriptor(desc);
-    
+
     positionDelta.clear();
 
     for (int i=position; i < entries.size(); i++) {
