@@ -11,11 +11,10 @@ buildscript {
 apply plugin: 'com.android.library'
 apply plugin: 'android-maven'
 
-version '0.2.2'
+version '0.2.3'
 group 'com.commonsware.cwac'
 
 dependencies {
-    // compile fileTree(dir: 'libs', include: '*.jar')
     compile 'com.android.support:support-v4:19.0.+'
 }
 

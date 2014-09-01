@@ -185,7 +185,7 @@ pulling from the appropriate repositories.
 
 Version
 -------
-This is version v0.2.2 of this module, meaning it is brand new.
+This is version v0.2.3 of this module, meaning it is brand new.
 
 Demo
 ----
@@ -221,6 +221,7 @@ the fence may work, but it may not.
 
 Release Notes
 -------------
+- v0.2.3: added some defensive programming around state
 - v0.2.2: merged issue #5 to support `List` in `ArrayPagerAdapter` constructor
 - v0.2.1: re-fixed `Parcelable` classloader bug, now enforcing tag uniqueness
 - v0.2.0: added Gradle build files and published AAR
