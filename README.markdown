@@ -194,6 +194,12 @@ of `ArrayPagerAdapter` for the native API Level 11 implementation of fragments. 
 `demo-v4/` sub-project has a similar sample for the `v4` backport of fragments from
 the Android Support package.
 
+Additional Documentation
+------------------------
+[The Busy Coder's Guide to Android Development](https://commonsware.com/Android)
+contains two chapters covering `ViewPager`. The second chapter, on advanced
+`ViewPager` techniques, covers this library in depth.
+
 License
 -------
 The code in this project is licensed under the Apache
