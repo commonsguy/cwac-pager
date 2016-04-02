@@ -57,6 +57,10 @@ public class SimplePageDescriptor implements PageDescriptor {
     return(title);
   }
 
+  public void setTitle(String title) {
+    this.title=title;
+  }
+
   public String getFragmentTag() {
     return(tag);
   }
