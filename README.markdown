@@ -162,12 +162,18 @@ an `insert()` of the same page into the new position
 
 ### Other Useful Methods
 
-`getExistingFragment()`, given a position, returns the existing fragment for that
+- `getExistingFragment()`, given a position, returns the existing fragment for that
 position in the `ViewPager`, if that fragment exists. Otherwise, it returns
 `null`.
 
-`getCurrentFragment()` is like `getExistingFragment()`, but returns the fragment
+- `getCurrentFragment()` is like `getExistingFragment()`, but returns the fragment
 for the currently-viewed page in the `ViewPager`.
+
+- `getPositionForTag()` tells you the position index of the page associated
+with a particular tag, where the tag comes from the `PageDescriptor`
+
+- `getPageDescriptor()`, given a position, returns the `PageDescriptor`
+associated with that position (e.g., so you can modify data in the descriptor)
 
 ### Limitations
 
@@ -185,7 +191,7 @@ pulling from the appropriate repositories.
 
 Version
 -------
-This is version v0.2.4 of this module, meaning it is brand new.
+This is version v0.2.5 of this module, meaning it is still pretty young.
 
 Demo
 ----
@@ -231,6 +237,7 @@ of guidance here.
 
 Release Notes
 -------------
+- v0.2.5: added `setTitle()` to `SimplePageDescriptor`, `getPositionForTag()` and `getPageDescriptor()` to `ArrayPagerAdapter`
 - v0.2.4: updated to Android Studio 1.0 and new AAR publishing system
 - v0.2.3: added some defensive programming around state
 - v0.2.2: merged issue #5 to support `List` in `ArrayPagerAdapter` constructor
