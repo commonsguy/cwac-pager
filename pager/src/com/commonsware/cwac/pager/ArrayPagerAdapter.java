@@ -191,7 +191,7 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
 
   @Override
   public String getPageTitle(int position) {
-    return(entries.get(position).getDescriptor().getTitle());
+    return(getPageDescriptor(position).getTitle());
   }
 
   @Override
@@ -203,6 +203,10 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
     }
 
     return(result);
+  }
+
+  public PageDescriptor getPageDescriptor(int position) {
+    return(entries.get(position).getDescriptor());
   }
 
   public void add(PageDescriptor desc) {
@@ -253,7 +257,7 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
 
   public void move(int oldPosition, int newPosition) {
     if (oldPosition != newPosition) {
-      PageDescriptor desc=entries.get(oldPosition).getDescriptor();
+      PageDescriptor desc=getPageDescriptor(oldPosition);
 
       remove(oldPosition);
       insert(desc, newPosition);
@@ -271,7 +275,7 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
   }
 
   private String getFragmentTag(int position) {
-    return(entries.get(position).getDescriptor().getFragmentTag());
+    return(getPageDescriptor(position).getFragmentTag());
   }
 
   private void validatePageDescriptor(PageDescriptor desc) {
