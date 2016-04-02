@@ -203,6 +203,18 @@ abstract public class ArrayPagerAdapter<T extends Fragment> extends
     return(entries.get(position).getDescriptor());
   }
 
+  public int getPositionForTag(String tag) {
+    for (int i=0;i<entries.size();i++) {
+      PageEntry entry=entries.get(i);
+
+      if (entry.getDescriptor().getFragmentTag().equals(tag)) {
+        return(i);
+      }
+    }
+
+    return(-1);
+  }
+
   public void add(PageDescriptor desc) {
     validatePageDescriptor(desc);
 
