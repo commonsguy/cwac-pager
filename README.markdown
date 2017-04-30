@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.commonsware.cwac:pager:0.2.+'
+    compile 'com.commonsware.cwac:pager:0.2.6'
 }
 ```
 
@@ -185,13 +185,13 @@ instance at runtime, this is something to keep in mind.
 Dependencies
 ------------
 This project depends on the Android Support package at compile time, if you are using
-the Android library project. It also depends on the Android Support package at runtime
+the Android library project. It also depends on the Android Support Library at runtime
 if you are using the `v4` classes. The Gradle files handle this automatically,
 pulling from the appropriate repositories.
 
 Version
 -------
-This is version v0.2.5 of this module, meaning it is still pretty young.
+This is version v0.2.6 of this module, meaning it is still pretty young.
 
 Demo
 ----
@@ -215,9 +215,14 @@ file.
 Questions
 ---------
 If you have questions regarding the use of this code, please post a question
-on [StackOverflow](http://stackoverflow.com/questions/ask) tagged with `commonsware` and `android`. Be sure to indicate
+on [Stack Overflow](http://stackoverflow.com/questions/ask) tagged with `commonsware` and `android`. Be sure to indicate
 what CWAC module you are having issues with, and be sure to include source code 
 and stack traces if you are encountering crashes.
+
+You are also welcome to join
+[the CommonsWare Community](https://community.commonsware.com/)
+and post questions
+and ideas to [the CWAC category](https://community.commonsware.com/c/cwac).
 
 If you have encountered what is clearly a bug, or if you have a feature request,
 please post an [issue](https://github.com/commonsguy/cwac-presentation/issues).
@@ -237,6 +242,7 @@ of guidance here.
 
 Release Notes
 -------------
+- v0.2.6: reset Android Support Library dependency to a fixed value, vs. `+`
 - v0.2.5: added `setTitle()` to `SimplePageDescriptor`, `getPositionForTag()` and `getPageDescriptor()` to `ArrayPagerAdapter`
 - v0.2.4: updated to Android Studio 1.0 and new AAR publishing system
 - v0.2.3: added some defensive programming around state
