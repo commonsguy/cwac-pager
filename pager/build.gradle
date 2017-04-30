@@ -1,12 +1,13 @@
 apply plugin: 'com.android.library'
 
 dependencies {
-    compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:support-core-ui:25.3.1'
+    compile 'com.android.support:support-fragment:25.3.1'
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
 
     sourceSets {
         main {
