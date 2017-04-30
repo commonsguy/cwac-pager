@@ -17,15 +17,15 @@ package com.commonsware.cwac.pager.demo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
-import java.util.ArrayList;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import com.commonsware.cwac.pager.PageDescriptor;
 import com.commonsware.cwac.pager.SimplePageDescriptor;
 import com.commonsware.cwac.pager.v4.ArrayPagerAdapter;
+import java.util.ArrayList;
 
-public class MainActivity extends SherlockFragmentActivity {
+public class MainActivity extends AppCompatActivity {
   private ArrayPagerAdapter<EditorFragment> adapter=null;
   private ViewPager pager=null;
   private int pageNumber=1;
@@ -42,7 +42,7 @@ public class MainActivity extends SherlockFragmentActivity {
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
-    getSupportMenuInflater().inflate(R.menu.actions, menu);
+    getMenuInflater().inflate(R.menu.actions, menu);
 
     return(super.onCreateOptionsMenu(menu));
   }

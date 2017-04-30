@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
 
-	<item android:id="@+id/add" android:showAsAction="ifRoom" android:icon="@drawable/content_new" android:title="@string/add"></item><item
-		android:id="@+id/split"
-		android:icon="@drawable/content_split"
-		android:showAsAction="ifRoom"
-		android:title="@string/split">
-	</item>
-	
-	<item android:id="@+id/remove" android:showAsAction="ifRoom" android:icon="@drawable/content_remove" android:title="@string/remove"></item>
-	<item android:id="@+id/swap" android:showAsAction="ifRoom" android:icon="@drawable/av_repeat" android:title="@string/swap"></item>
+  <item
+    android:id="@+id/add"
+    android:icon="@drawable/content_new"
+    android:title="@string/add"
+    app:showAsAction="ifRoom" />
+  <item
+    android:id="@+id/split"
+    android:icon="@drawable/content_split"
+    android:title="@string/split"
+    app:showAsAction="ifRoom" />
+  <item
+    android:id="@+id/remove"
+    android:icon="@drawable/content_remove"
+    android:title="@string/remove"
+    app:showAsAction="ifRoom" />
+  <item
+    android:id="@+id/swap"
+    android:icon="@drawable/av_repeat"
+    android:title="@string/swap"
+    app:showAsAction="ifRoom" />
 
 </menu>
