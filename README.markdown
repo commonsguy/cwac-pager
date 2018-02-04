@@ -80,7 +80,7 @@ two methods:
 - `getTitle()`, which will be the title used for this page, for things like
 `PagerTabStrip` and the ViewPagerIndicator family of indicators
 
-- `getFragmentTag()`, which is a unique tag for this page's fragment
+- `getFragmentTag()`, which is a **unique** tag for this page's fragment
 
 Also, `PageDescriptor` extends the `Parcelable` interface, and so any implementation
 of `PageDescriptor` must also implement the methods and `CREATOR` required by
@@ -88,11 +88,11 @@ of `PageDescriptor` must also implement the methods and `CREATOR` required by
 
 You are welcome to create your own `PageDescriptor` if you wish. However, there
 is a built-in implementation, `SimplePageDescriptor`, which probably meets
-your needs. You just pass the tag and title into the `SimplePageDescriptor`
+your needs. You just pass the **unique** tag and title into the `SimplePageDescriptor`
 constructor, and it handles everything else, including the `Parcelable`
 implementation.
 
-Note that `getFragmentTag()` must return unique values compared to any
+Note that `getFragmentTag()` must return **unique** values compared to any
 other outstanding page in the adapter.
 
 ### Creating and Populating the Adapter
