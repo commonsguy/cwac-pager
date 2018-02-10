@@ -1,6 +1,8 @@
 CWAC-Pager: Power to the PagerAdapter
 =====================================
 
+**NOTE**: Work on this project is suspended, as the author has moved away from `ViewPager` to using `RecyclerView` as a pager.
+
 This project
 offers an `ArrayPagerAdapter` that offers another alternative `PagerAdapter`
 implementation for use with `ViewPager`.
